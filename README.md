@@ -48,14 +48,14 @@ Then, if you are happy with how it looks, you can build the website:
 mkdocs build
 ```
 
-This will create the webpage in the `docs` folder. It is necessary that the webpage is created in this folder so that Github Pages can fetch it properly. To set up the Github Pages, go to the `**Settings**` of the repo in [github.com](https://github.com/). Then click on `**Pages**` and set up the `**Build and deployment section**` as below:
+This will create the webpage in the `docs` folder. It is necessary that the webpage is created in this folder so that Github Pages can fetch it properly. To set up the Github Pages, go to the **`Settings`** of the repo in [github.com](https://github.com/). Then click on **`Pages`** and set up the **`Build and deployment section`** as below:
 
 ![](./develop/images/git_pages.png)
 
 Where:
--   `**Source**` is `*Deploy from a branch*`
--   In `**Branch**`:
-    -   `**Select branch**` is `*webpage*` or the name of the branch were this material is
-    -   `**Select folder**` is `*/docs*`
+-   **`Source`** is *`Deploy from a branch`*
+-   In **`Branch`**:
+    -   **`Select branch`** is *`webpage`* or the name of the branch were this material is
+    -   **`Select folder`** is *`/docs`*
 
-When you click on `**Save**`, the webpage should be activated shortly afterwards in the displayed at the top.
+When you click on **`Save`**, the webpage should be activated shortly afterwards in the displayed at the top.
