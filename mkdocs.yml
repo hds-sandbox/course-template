@@ -1,6 +1,6 @@
 # Project information
 site_name: Course Template
-site_url: https://example.com/
+site_url: "" # This should be nothing cause we build the webpage from local
 site_author: John Doe
 site_description: >-
   Outline for course
@@ -15,12 +15,7 @@ theme:
   # Use the Material for MkDocs theme
   # url: https://squidfunk.github.io/mkdocs-material/
 
-  name: null
-  custom_dir: !ENV [THEME_DIR, "material"]
-
-  # Static files
-  static_templates:
-    - 404.html
+  name: material
 
   # Necessary for search to work properly
   include_search_page: false
@@ -38,6 +33,7 @@ theme:
     # - navigation.instant
     # - navigation.prune
     - navigation.sections
+    - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
@@ -65,10 +61,9 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-
+  
   favicon: images/favicon.png
-  icon:
-    logo: logo
+  logo: images/logo.png
 
 # Changes to website colours and image parameters
 extra_css:
@@ -82,7 +77,7 @@ extra_javascript:
 
 plugins:
   - search
-
+  - mkdocs-video # embed videos to the docs
   # minify HTML of a page before it is written to disk
   - minify:
       minify_html: true
@@ -97,7 +92,7 @@ extra:
       link: https://github.com/hds-sandbox
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/ucph_heads
-
+  homepage: http://hds-sandbox.github.io/ 
 
 # Extensions
 
@@ -139,6 +134,10 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde # delete and subscript
 
+# Extra configs
+use_directory_urls: false
+docs_dir: develop # source md files should be saved in the develop folder
+site_dir: docs # built webpage will be created in the docs folder
 
 # Page tree
 nav:
