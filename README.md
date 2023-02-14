@@ -1,10 +1,10 @@
 # course-template repo
 
-This repository is a webpage template for courses. The
+This repository is a webpage template for courses.
 
 ## Requirements
 
-In order to run this repo, you will need to have installed [conda or pip](https://docs.conda.io/projects/conda/en/latest/index.html). Then install the following packages using the terminal:
+In order to create a webpage from this repo, you will need to have installed [conda or pip](https://docs.conda.io/projects/conda/en/latest/index.html). Then install the following packages using the terminal:
 
 ```bash
 pip install mkdocs
