@@ -25,7 +25,7 @@
   }
   
   [data-md-color-scheme="slate"] {
-    --md-primary-fg-color: #b4dbf3;
+    --md-primary-fg-color: #4266A1;
     --md-primary-fg-color--light: #b4dbf3;
     --md-primary-fg-color--dark: #b4dbf3;
     --md-primary-bg-color: hsla(0, 0%, 100%, 1);
@@ -39,7 +39,7 @@
     --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
     --md-hue: 210;
     /* Footer */
-    --md-footer-bg-color: #b4dbf3;
+    --md-footer-bg-color: #4266A1;
     --md-footer-bg-color--dark: hsla(0, 0%, 0%, 0.32);
     --md-footer-fg-color: hsla(0, 0%, 100%, 1);
     --md-footer-fg-color--light: hsla(0, 0%, 100%, 0.7);
