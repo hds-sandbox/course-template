@@ -37,8 +37,9 @@ knitr::opts_chunk$set(autodep        = TRUE,
     &#128368; **Time Estimation:** X minutes  
 
     &#128172; **Learning Objectives:**    
-        1. First item  
-        2. Second item  
+    
+    1. First item  
+    2. Second item  
 
 This is an example of how to make md pages from rmarkdown documents. The source code to generate this md document is in `develop/rmd/rmarkdown_example.Rmd`.
 
