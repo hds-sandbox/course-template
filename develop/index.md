@@ -25,7 +25,7 @@ hide:
 
 **Updated:** Date last updates
 
-Here is where you will write an abstract about the course.
+Here is where you will write an abstract about the course. This is an example of the use of citations [@creative_commons_2022]
 
 <br>
 
@@ -63,3 +63,6 @@ This is where you should write a longer introduction to the course.
 
 - First acknowledgement
 
+### References
+
+\bibliography
