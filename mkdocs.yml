@@ -1,6 +1,6 @@
 # Project information
 site_name: Course Template
-site_url: "" # This should be nothing cause we build the webpage from local
+site_url: 'https://hds-sandbox.github.io/course-template/' # This should be nothing cause we build the webpage from local
 site_author: John Doe
 site_description: >-
   Outline for course
