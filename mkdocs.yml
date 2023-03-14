@@ -1,6 +1,6 @@
 # Project information
 site_name: Course Template
-site_url: 'https://hds-sandbox.github.io/course-template/' # This should be the GitHub Pages
+site_url: 'https://hds-sandbox.github.io/course-template/' #  # This should be the final hosting url
 site_author: Conor O'Hare and Jose Alejandro Romero Herrera # Change authors accordingly
 site_description: >-
   Outline for course
