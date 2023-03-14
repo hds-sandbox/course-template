@@ -1,13 +1,13 @@
 # Project information
 site_name: Course Template
-site_url: 'https://hds-sandbox.github.io/course-template/' # This should be nothing cause we build the webpage from local
-site_author: John Doe
+site_url: 'https://hds-sandbox.github.io/course-template/' # This should be the GitHub Pages
+site_author: Conor O'Hare and Jose Alejandro Romero Herrera # Change authors accordingly
 site_description: >-
   Outline for course
 
 # Repository
-repo_name: hds-sandbox
-repo_url: https://github.com/hds-sandbox
+repo_name: course-template # Modify this to your repo name
+repo_url: https://github.com/hds-sandbox/course-template # Modify this to your repo url
 
 # Configuration
 theme:
@@ -76,13 +76,12 @@ extra_javascript:
 
 plugins:
   - tags:
-      tags_file: keywords.md
+      tags_file: keywords.md # Keywords file to use for mkdocs tags
   - bibtex:
-      bib_file: references.bib
+      bib_file: references.bib # Reference file in bibtex format
   - search
   - mkdocs-video # embed videos to the docs
-  # minify HTML of a page before it is written to disk
-  - minify:
+  - minify:   # minify HTML of a page before it is written to disk
       minify_html: true
   - mkdocs-jupyter
 
@@ -147,6 +146,8 @@ docs_dir: develop # source md files should be saved in the develop folder
 site_dir: docs # built webpage will be created in the docs folder
 
 # Page tree
+# Include your page titles and associating .md files here
+
 nav:
   - Introduction: index.md
   - General Page: empty.md
@@ -155,5 +156,4 @@ nav:
   - Keyword index: keywords.md
   - Contributors: contributors.md
   
-  # include your page titles and associating .md files here
    
