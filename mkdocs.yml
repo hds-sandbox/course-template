@@ -68,6 +68,7 @@ theme:
 
 # Changes to website colours and image parameters
 extra_css:
+  - stylesheets/neoteroi-mkdocs.css
   - stylesheets/extra.css
 
 extra_javascript:
@@ -140,6 +141,7 @@ markdown_extensions:
   - pymdownx.tasklist: # checkbox task list  
       custom_checkbox: true
   - pymdownx.tilde # delete and subscript
+  - neoteroi.cards
 
 # Extra configs
 use_directory_urls: false

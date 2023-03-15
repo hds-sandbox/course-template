@@ -33,17 +33,24 @@ Here is where you will write an abstract about the course. This is an example of
 <!-- Format: [author name](link to author page){ .md-button } -->
 <h4>Authors</h4>
 
-[Jennifer Bartell](https://www.linkedin.com/in/jagbartell/?originalSubdomain=dk){ .md-button }
-[José Alejandro Romero Herrera](https://www.linkedin.com/in/jose-alejandro-romero-herrera/){ .md-button }
-[Samuele Soraggi](https://www.linkedin.com/in/samuelesoraggi/){ .md-button }
+::cards::
+
+- title: Jose Alejandro Romero Herrera
+  content: Data Scientist [:custom-orcid:](https://orcid.org/0000-0002-4765-2087) [:simple-github:](https://github.com/joseale2310)
+  image: ./images/cards/jarh.jpeg
+
+::/cards::
+
+[cards cols="4"(./develop/cards/cards.yaml)]
 
 <hr>
 
 <!-- OVERVIEW OF COURSE -->
 !!! abstract "Overview"
-    &#128172; **Syllabus:**    
-        1. First item  
-        2. Second item  
+    &#128172; **Syllabus:** 
+
+    1. First item  
+    2. Second item  
 
     &#128368; **Total Time Estimation:** X hours  
 

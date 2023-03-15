@@ -11,6 +11,7 @@ pip install mkdocs
 pip install mkdocs-material
 pip install mkdocs-video
 pip install mkdocs-bibtex 
+pip install neoteroi-mkdocs
 ```
 
 ## Usage
@@ -21,10 +22,13 @@ I would recommend that all the webpage source materials should be saved in an in
 course-template/
     |
     |-> develop/ # This folder contains the source material
+    |   |-> cards/ This folder contains the content of the social cards in yaml format
+    |   |
     |   |-> images/ # This folder contains all the images for the webpage as well as the favicon and the logo
     |   |
     |   |-> stylesheets/
-    |   |  |-> extra.css # This file contains formatting of the webpage: colors and fonts
+    |   |   |-> extra.css # This file contains formatting of the webpage: colors and fonts
+    |   |   |-> neoteroi-mkdocs.css # formatting of the social cards
     |   |   
     |   |-> *.md # These will be individual webpages that should be inside the mkdocs.yml navigation tree
     |
@@ -160,3 +164,41 @@ Ideally, one would have a [CRediT matrix](https://credit.niso.org/), but it seem
 | [Visualization](https://credit.niso.org/contributor-roles/visualization/)                       |          |
 | [Writing - original draft](https://credit.niso.org/contributor-roles/writing-original-draft/)   |          |
 | [Writing - review & editing](https://credit.niso.org/contributor-roles/writing-review-editing/) |          |
+
+
+## Authors cards
+
+You can add social cards to a markdown document in two different ways:
+
+**1. Write directly on the markdown file**
+
+```
+::cards::
+
+- title: Jose Alejandro Romero Herrera
+  content: Data Scientist [:custom-orcid:](https://orcid.org/0000-0002-4765-2087) [:simple-github:](https://github.com/joseale2310)
+  image: ./images/cards/jarh.jpeg
+
+::/cards::
+```
+
+**2. Create a yaml file with all the content**
+
+You can create a yaml file with the content like this:
+
+```
+- title: Jennifer Bartell
+  content: |
+    Project Coordinator and Data Scientist <br>
+    [:custom-orcid:](https://orcid.org/0000-0003-2750-9678) [:simple-github:](https://github.com/jenbartell)
+  image: https://media.licdn.com/dms/image/C4E03AQGtFrDPj3gkmw/profile-displayphoto-shrink_400_400/0/1646839294717?e=1684368000&v=beta&t=pTEBcTvZKQXQFLp4VEwLXs7nnahQ1uclrrqbdXrCVnU
+
+```
+
+And then add to a markdown file like this:
+
+```
+[cards cols="4"(./develop/cards/cards.yaml)]
+```
+
+By default you can only provide 1 to 6 columns.
