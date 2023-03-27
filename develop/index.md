@@ -30,18 +30,9 @@ Here is where you will write an abstract about the course. This is an example of
 <br>
 
 <!-- AUTHORS -->
-<!-- Format: [author name](link to author page){ .md-button } -->
 <h4>Authors</h4>
 
-::cards::
-
-- title: Jose Alejandro Romero Herrera
-  content: Data Scientist [:custom-orcid:](https://orcid.org/0000-0002-4765-2087) [:simple-github:](https://github.com/joseale2310)
-  image: ./images/cards/jarh.jpeg
-
-::/cards::
-
-[cards cols="4"(./develop/cards/cards.yaml)]
+[cards cols="3"(./develop/cards/cards.yaml)]
 
 <hr>
 
@@ -56,8 +47,17 @@ Here is where you will write an abstract about the course. This is an example of
 
     &#128193; **Supporting Materials:**  
 
-    &#128203; **License:** [Tutorial Content is licensed under Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
+    :man_technologist: **Target Audience:** PhD, MsC, etc.
+    [comment]: # (Property in Bioschema: audience)
 
+    :woman_student: **Level:** Beginner/Intermediate/Advanced
+    [comment]: # (Property in Bioschema: educationalLevel)
+
+    :lock: **License:** [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
+    [comment]: # (Property in Biochema: licence)
+    
+    :coin: **Funding:** This project was funded by the Novo Nordisk Fonden (NNF20OC0063268).
+    [comment]: # Funding by NNF and others
 
 !!! warning "Course Requirements"
     - First requirement
