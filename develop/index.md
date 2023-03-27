@@ -38,14 +38,14 @@ Here is where you will write an abstract about the course. This is an example of
 
 <!-- OVERVIEW OF COURSE -->
 !!! abstract "Overview"
-    &#128172; **Syllabus:** 
+    :book: **Syllabus:** 
 
     1. First item  
     2. Second item  
 
-    &#128368; **Total Time Estimation:** X hours  
+    :clock: **Total Time Estimation:** X hours  
 
-    &#128193; **Supporting Materials:**  
+    :file_folder: **Supporting Materials:**  
 
     :man_technologist: **Target Audience:** PhD, MsC, etc.
     [comment]: # (Property in Bioschema: audience)
