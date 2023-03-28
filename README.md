@@ -24,7 +24,7 @@ Go to settings and select `Collaborators and teams` under `Access` in the left s
 3. Selet the appropriate role 
 4. Click `add user to this repository`
 
-![](./tmp/add_collaborators.pngp)
+![](./tmp/add_collaborators.png)
 
 ### Update the README.md
 Modify and add information about the new workshop/course.
@@ -43,7 +43,8 @@ On the other hand, actual data and slides are too big for a github repository. S
 
 Zenodo is a Open Science data repository from the OpenAIRE project supported by [CERN](https://home.cern/) to ensure that everyone can join in Open Science. 
 It allows researchers to upload many different types of data and gives each repository a unique and citeable identifier (DOI). 
-We can also link a Github repository and whenever you create a release for the github repo, it will give it as well a DOI.
+We can also link a Github repository and whenever you create a release for the github repo, it will give it as well a DOI. 
+Follow this [link](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) for instructions 
 We are using Zenodo to deposit slides, materials and data necessary for the course, relieving the size of the Github repo. It also makes it easier to update the materials and use them in the UCloud apps.
 
 ### webpage branch
