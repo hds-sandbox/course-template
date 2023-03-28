@@ -14,6 +14,8 @@ In the pop-up window:
    4. Make sure to tick `Include all branches`
    5. Click **`Create repository from template`**
 
+![](./tmp/new_repo_from_template.png)
+
 ### Add collaborators
 Go to settings and select `Collaborators and teams` under `Access` in the left side menu 
 
@@ -21,6 +23,8 @@ Go to settings and select `Collaborators and teams` under `Access` in the left s
 2. Select a person or a team to invite
 3. Selet the appropriate role 
 4. Click `add user to this repository`
+
+![](./tmp/add_collaborators.pngp)
 
 ### Update the README.md
 Modify and add information about the new workshop/course.
