@@ -53,18 +53,24 @@ Here is where you will write an abstract about the course. This is an example of
     :woman_student: **Level:** Beginner/Intermediate/Advanced
     [comment]: # (Property in Bioschema: educationalLevel)
 
-    :lock: **License:** [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
+    :lock: **License:** [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) :custom-by:
     [comment]: # (Property in Biochema: licence)
     
     :coin: **Funding:** This project was funded by the Novo Nordisk Fonden (NNF20OC0063268).
-    [comment]: # Funding by NNF and others
+    [comment]: # (Funding by NNF and others)
 
 !!! warning "Course Requirements"
     - First requirement
     - Second requirement
 
-
 This is where you should write a longer introduction to the course.
+
+!!! info "Goals"
+    By the end of this workshop, you should be able to:
+
+    - Goal 1
+    - Goal 2
+    -   
 
 ### Acknowledgements
 
