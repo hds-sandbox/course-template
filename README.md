@@ -25,8 +25,8 @@ Go to settings and select `Collaborators and teams` under `Access` in the left s
 ### Update the README.md
 Modify and add information about the new workshop/course.
 
-### Delete the images folder
-The images folder just supports this README file, so you can just delete it after modifying it.
+### Delete the tmp folder
+The tmp folder just supports this README file, so you can just delete it after modifying it.
 
 ## The branches
 

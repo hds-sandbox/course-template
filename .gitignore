@@ -41,5 +41,3 @@ vignettes/*.pdf
 # Other
 *.DS_Store
 **/tmp
-*.docx
-Slides/
