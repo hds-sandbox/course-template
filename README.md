@@ -50,7 +50,7 @@ We are using Zenodo to deposit slides, materials and data necessary for the cour
 ### webpage branch
 
 The webpage branch contains all the content needed to create and deploy the self-learning part of the course/workshop. 
-For more instructions, including how to set up Github Pages and automatic deploying of the webpage, check the README.md file from the [webpage branch](https://github.com/hds-sandbox/course-template/tree/webpage.)
+For more instructions, including how to set up Github Pages and automatic deploying of the webpage, check the README.md file from the [webpage branch](https://github.com/hds-sandbox/course-template/tree/webpage).
 
 ### gh-deploy branch
 
