@@ -1,4 +1,4 @@
-B# History files
+# History files
 *.Rhistory
 *.Rapp.history
 
@@ -40,3 +40,7 @@ vignettes/*.pdf
 
 # Other
 *.DS_Store
+
+.DS_Store
+.ipynb_checkpoints
+Data
