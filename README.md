@@ -58,3 +58,7 @@ The tool that we use to create the website is called [`mkdocs`](https://www.mkdo
 Mkdocs has a specific command `mkdocs gh-deploy` that takes the content of a branch and creates and deploys the website in a new branch called "gh-deploy".
 In our case, it would use the branch "webpage" to create our website. 
 The branch "webpage" contains a github workflow that will automatically deploy the website using `mkdocs gh-deploy` whenever you push a commit to the webpage branch.
+
+### docker branch
+
+Some of our courses are containerized with `Docker` and deployed on docker hub, so that you can download the container for your own use on another cluster or local computer. This branch contains the Dockerfile and the github workflow to build and deploy the container on docker hub.
