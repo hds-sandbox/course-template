@@ -59,6 +59,7 @@ The webpag-quarto branch contains - as above - an example of webpage to create a
 
 ### gh-deploy branch
 
-The tool that you can use to create a course website is wither [`mkdocs`](https://www.mkdocs.org/) or [`quarto`](https://quarto.org/), depending on which you prefere from the two github branches above.
-Mkdocs has a specific command `mkdocs gh-deploy` that takes the content of a branch and creates and deploys the website in a new branch called "gh-pages". The same for `quarto deploy gh-pages`.
-Here, one of the branches "webpage-mkdocs" and "webpage-quarto" can be used to create the website. Once you save the changes pushing them to github, a github workflow will automatically deploy the website using an appropriate github action.
+The tool that we use to create the website is called [`mkdocs`](https://www.mkdocs.org/) with the theme [`material`](https://squidfunk.github.io/).
+Mkdocs has a specific command `mkdocs gh-deploy` that takes the content of a branch and creates and deploys the website in a new branch called "gh-deploy".
+In our case, it would use the branch "webpage" to create our website. 
+The branch "webpage" contains a github workflow that will automatically deploy the website using `mkdocs gh-deploy` whenever you push a commit to the webpage branch.
