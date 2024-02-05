@@ -44,3 +44,5 @@ vignettes/*.pdf
 .DS_Store
 .ipynb_checkpoints
 Data
+.quarto
+_site
