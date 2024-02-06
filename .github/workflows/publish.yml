@@ -10,6 +10,10 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Install libcurl on Linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get update -y && sudo apt-get install -y libcurl4-openssl-dev
+
       - name: Check out repository
         uses: actions/checkout@v4
 
@@ -21,10 +25,10 @@ jobs:
         with:
           r-version: '4.2.0'
 
-#      - name: Install R Dependencies
-#        uses: r-lib/actions/setup-renv@v2
-#        with:
-#          cache-version: 1
+      - name: Install R Dependencies
+        uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 1
 
 #      - name: Install pandoc
 #        uses: pandoc/actions/setup@{main}
