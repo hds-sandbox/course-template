@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-01-01">
 
-<title>Course Template - Jupyter notebook example</title>
+<title>Course Template - Rmarkdown example</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -78,24 +78,24 @@ div.csl-indent {
 }</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -168,10 +168,10 @@ div.csl-indent {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/logo.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/logo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Course Template</span>
     </a>
   </div>
@@ -182,19 +182,19 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./people.html"> 
+    <a class="nav-link" href="../people.html"> 
 <span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./rmd/rmarkdown_example.html"> 
+    <a class="nav-link active" href="../rmd/rmarkdown_example.html" aria-current="page"> 
 <span class="menu-text">Rmarkdown</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./jupyter_example.html" aria-current="page"> 
+    <a class="nav-link" href="../jupyter_example.html"> 
 <span class="menu-text">Jupyter example</span></a>
   </li>  
 </ul>
@@ -226,10 +226,10 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#jupyter-notebook-example-title" id="toc-jupyter-notebook-example-title" class="nav-link active" data-scroll-target="#jupyter-notebook-example-title">Jupyter notebook example title</a>
+  <li><a href="#rmarkdown-example" id="toc-rmarkdown-example" class="nav-link active" data-scroll-target="#rmarkdown-example">Rmarkdown example</a>
   <ul class="collapse">
-  <li><a href="#writing-admonitions" id="toc-writing-admonitions" class="nav-link" data-scroll-target="#writing-admonitions">Writing admonitions</a></li>
-  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code">Running code</a></li>
+  <li><a href="#writing-code" id="toc-writing-code" class="nav-link" data-scroll-target="#writing-code">Writing code</a></li>
+  <li><a href="#adding-images" id="toc-adding-images" class="nav-link" data-scroll-target="#adding-images">Adding images</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -239,7 +239,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Jupyter notebook example</h1>
+<h1 class="title">Rmarkdown example</h1>
 </div>
 
 
@@ -268,9 +268,8 @@ div.csl-indent {
 </header>
 
 
-<p>This is simply done by writing a markdown cell with the metadata at the very beginning of the notebook. Citations are like <span class="citation" data-cites="Garcia2020">(<a href="#ref-Garcia2020" role="doc-biblioref">Garcia et al. 2020</a>)</span>.</p>
-<section id="jupyter-notebook-example-title" class="level1">
-<h1>Jupyter notebook example title</h1>
+<section id="rmarkdown-example" class="level1">
+<h1>Rmarkdown example</h1>
 <div class="callout callout-style-default callout-note callout-titled" title="overview">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -283,55 +282,47 @@ overview
 <div class="callout-body-container callout-body">
 <p>🕰 <strong>Time Estimation:</strong> X minutes</p>
 <p>💬 <strong>Learning Objectives:</strong></p>
-<ul>
-<li><ol type="1">
-<li>First item</li>
-</ol></li>
-<li><ol start="2" type="1">
+<ol type="1">
+<li>First item<br>
+</li>
 <li>Second item</li>
-</ol></li>
-</ul>
+</ol>
+<p>This is an example of how to make md pages from rmarkdown documents. The source code to generate this md document is in <code>develop/rmd/rmarkdown_example.Rmd</code>.</p>
 </div>
 </div>
-<p>Write your introduction to the page here.</p>
-<section id="writing-admonitions" class="level2">
-<h2 class="anchored" data-anchor-id="writing-admonitions">Writing admonitions</h2>
-<p>You can write admonitions as above in a markdown cell. Look for more in the quarto manual to hide admonitions or use other types like warnings or tips admonitions.</p>
-</section>
-<section id="running-code" class="level2">
-<h2 class="anchored" data-anchor-id="running-code">Running code</h2>
-<p>This is some example code</p>
-<div id="84afe9ce" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2022-02-23T10:16:33.454929Z&quot;,&quot;iopub.status.busy&quot;:&quot;2022-02-23T10:16:33.454367Z&quot;,&quot;iopub.status.idle&quot;:&quot;2022-02-23T10:16:43.930714Z&quot;,&quot;shell.execute_reply&quot;:&quot;2022-02-23T10:16:43.929158Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2022-02-23T10:16:33.454868Z&quot;}" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>dataset_url <span class="op">=</span> (<span class="st">'https://raw.githubusercontent.com/m-mehdi/pandas_tutorials/main/weekly_stocks.csv'</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(dataset_url, parse_dates<span class="op">=</span>[<span class="st">'Date'</span>], index_col<span class="op">=</span><span class="st">'Date'</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">'display.max.columns'</span>, <span class="va">None</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                  MSFT          FB        AAPL
-Date                                          
-2021-05-24  249.679993  328.730011  124.610001
-2021-05-31  250.789993  330.350006  125.889999
-2021-06-07  257.890015  331.260010  127.349998
-2021-06-14  259.429993  329.660004  130.460007
-2021-06-21  265.019989  341.369995  133.110001</code></pre>
+<p>First we need to write the document as usual. Try to use the admonitions as in previous examples. Citations are like this <span class="citation" data-cites="Garcia2020">(<a href="#ref-Garcia2020" role="doc-biblioref">Garcia et al. 2020</a>)</span>.</p>
+<section id="writing-code" class="level2">
+<h2 class="anchored" data-anchor-id="writing-code">Writing code</h2>
+<p>You can run code as usual in Rmarkdown. The chunk options can be very useful. By default, the code will not run unless explicity specified in the chunk (you can change this behaviour on the “knitr” chunk above).</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div id="cell-fig-charts" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.plot(y<span class="op">=</span><span class="st">'MSFT'</span>, figsize<span class="op">=</span>(<span class="dv">9</span>,<span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="fig-charts" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> txhousing, <span class="fu">aes</span>(<span class="at">x =</span> sales, <span class="at">y =</span> listings)) <span class="sc">+</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-charts" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-charts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="jupyter_example_files/figure-html/fig-charts-output-1.png" class="img-fluid figure-img">
+<img src="./images/rmarkdown_example.rmarkdown/fig-charts-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-charts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Charts
 </figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-images" class="level2">
+<h2 class="anchored" data-anchor-id="adding-images">Adding images</h2>
+<p>You can add images using the <code>knitr::include_graphics()</code> option.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"../img/logo.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../img/logo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div>
 </div>
