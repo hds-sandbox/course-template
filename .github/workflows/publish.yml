@@ -1,6 +1,7 @@
 on:
-  push:
-    branches: webpage-quarto
+  workflow_dispatch
+#  push:
+#    branches: webpage-quarto
 
 name: Quarto Publish
 
