@@ -36,18 +36,29 @@ bibliography: resources/references.bib
 [comment]: # (Funding by NNF and others)
 :::
 
-!!! warning "Course Requirements"
+::: {.callout-warning title="Course Requirements"}
     - First requirement
     - Second requirement
+:::
 
-This is where you should write a longer introduction to the course.
+Write the longer introduction to the course here. 
 
-!!! info "Goals"
+Feature tips, more [here](https://quarto.org/docs/authoring/callouts.html#markdown-syntax): 
+
+::: {.callout-tip title="Course Goals"}
     By the end of this workshop, you should be able to:
 
     - Goal 1
     - Goal 2
-    -   
+:::
+
+::: {.callout-caution collapse="true"}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+
 
 ### Acknowledgements
 
