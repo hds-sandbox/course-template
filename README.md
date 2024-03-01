@@ -57,9 +57,8 @@ Check out [this link](https://quarto.org/docs/output-formats/html-themes.html) f
 
 Finally, there is a commented-out section that includes a bioschema as part of the webpage header. The [bioschema](https://bioschemas.org/) is in an HTML file, whose script is always executed by the deployed webpage. 
 
-::: {.callout-important}
+!!! important
     Uncomment this part of the configuration **only upon finalization of your website** - so that it will be published on the Elixir TeSS database with the appropriate finished content.
-:::
 
 Take a look at `resources/bioschema.html` to see how the bioschema is structured. It is essentially a `JSON` table containing standard descriptors such as course name, type, audience, datasets and more.
 
