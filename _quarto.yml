@@ -29,5 +29,6 @@ format:
       light: [materia, css/materialight.scss]
       dark: darkly
     toc: true
+    code-fold: true
 #    include-in-header:
 #      - file: "resources/bioschema.html"
