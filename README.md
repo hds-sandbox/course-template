@@ -18,4 +18,4 @@ In the example the uid is set to 6835. This is because any user of `GenomeDK` ha
 
 ## Examples
 
-A specific example for the use of this Docker container execution can be seen in the `Access` menu of the NGS summer school webpage for both GenomeDK with singularity and for Docker.
+A specific example for the use of this Docker container execution can be seen in the `Access` menu of the [NGS summer school webpage](https://hds-sandbox.github.io/NGS_summer_course_Aarhus/) for both GenomeDK with Singularity and for Docker.
