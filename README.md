@@ -37,15 +37,15 @@ The tmp folder just supports this README file, so you can just delete it after m
 ### main branch
 
 The main branch is a folder template to create the actual materials for a workshop session. Notebooks, exercises and materials associated to them (like images) should be here. 
-On the other hand, actual data and slides are too big for a github repository. Such materials should be hosted in a [zenodo](https://zenodo.org/) repository.
+On the other hand, actual data and slides are too big for a GitHub repository. Read the next section about hosting data in a [zenodo](https://zenodo.org/) repository. Consider what is the best strategy for hosting or sharing slides. For collaborative questions, there is a copy in SharePoint.
 
-#### Hosting data and slides in Zenodo
+#### Hosting data in Zenodo
 
 Zenodo is a Open Science data repository from the OpenAIRE project supported by [CERN](https://home.cern/) to ensure that everyone can join in Open Science. 
 It allows researchers to upload many different types of data and gives each repository a unique and citeable identifier (DOI). 
 We can also link a Github repository and whenever you create a release for the github repo, it will give it as well a DOI. 
 Follow this [link](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) for instructions 
-We are using Zenodo to deposit slides, materials and data necessary for the course, relieving the size of the Github repo. It also makes it easier to update the materials and use them in the UCloud apps.
+We are using Zenodo to deposit complementary materials and data necessary for the course, relieving the size of the Github repo. It also makes it easier to update the materials and use them in the UCloud apps.
 
 ### webpage-mkdocs branch
 
