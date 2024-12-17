@@ -60,7 +60,6 @@ The webpage-quarto branch contains - as above - an example of a webpage to creat
 
 ### gh-pages branch
 
-The tool that we use to create the website is called [`mkdocs`](https://www.mkdocs.org/) with the theme [`material`](https://squidfunk.github.io/).
-Mkdocs has a specific command `mkdocs gh-deploy` that takes the content of a branch and creates and deploys the website in a new branch called "gh-deploy".
-In our case, it would use the branch "webpage" to create our website. 
-The branch "webpage" contains a GitHub workflow that will automatically deploy the website using `mkdocs gh-deploy` whenever you push a commit to the webpage branch.
+The tool we use to create the website is Quarto with the theme [`material`](https://squidfunk.github.io/). Instead of relying on Quarto, we use GitHub Actions to automatically build and deploy the website.
+
+The source content is stored in the "webpage" branch. Whenever a commit is pushed to this branch, a GitHub workflow is triggered to build the Quarto website and deploy it to a new branch called "gh-pages." This branch serves as the live version of the website. Using this automated workflow ensures that updates to the website are consistent and immediate after changes are made in the "webpage" branch.'
