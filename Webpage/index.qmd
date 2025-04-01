@@ -1,3 +1,4 @@
+---
 author:
     - name: Instructor 1
       orcid: 0000-0000-0000-0001
@@ -17,13 +18,14 @@ format:
 # Welcome to the asdfvasdfv tutorial
 :::
 
-<br>
+&nbsp;
 
 This course is an introduction to the method of dfhsdjkfhsjkfhksjhdf, which quantifies the statistical 
 association between asdasdacfdc and dfvdefvv (often on disease traits). This course will not focus on using any 
 particular software, instead explaining *why* the given analyses are done from a statistical and biological perspective. 
 
 :::{.callout-note title="Course Overview"}
+
 - 📖 **Syllabus:**  
 
 1. Understand what is a advasdfvasdfv is and why we use it  
@@ -99,6 +101,14 @@ data <- read.csv("resources/samplesheet.csv")
 
 # Print the data as a table
 data %>% gt()
+```
+
+or OSJ language 
+
+```{ojs}
+viewof table = Inputs.table(
+  data: FileAttachment("resources/samplesheet.csv").csv()
+)
 ```
 
 

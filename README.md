@@ -1,35 +1,38 @@
 # course-template repo
 
-This repository is a template for courses and webpages for self-learning.
+This repository is the template for courses and webpages for self-learning used at the Danish Health Data Science Sandbox project.
 
-# Using this template
+## Start using this template
 
-## Click the green `Use this template` button to the top right.
+1. **Click the green `Use this template` button to the top right.**
   
-In the pop-up window:
+ In the pop-up window:
 
    1. Choose an organisation where the repository will be hosted
    2. Enter a name for the new repository (keep in mind that this will be part of the URL)
    3. Decide if the repository should be Public (most likely) or Private
    4. Click **`Create repository from template`**
 
-![](.tmp/new_repo_from_template.png)
+ ![](.tmp/new_repo_from_template.png)
 
-## Add collaborators
-Go to settings and select `Collaborators and teams` under `Access` in the left side menu 
+2. **Add collaborators**
 
-1. Click one of the green buttons `add people`  or `add teams`
-2. Select a person or a team to invite
-3. Select the appropriate role 
-4. Click `add user to this repository`
+ Go to settings and select `Collaborators and teams` under `Access` in the left side menu 
 
-![](.tmp/add_collaborators.png)
+  1. Click one of the green buttons `add people`  or `add teams`
+  2. Select a person or a team to invite
+  3. Select the appropriate role 
+  4. Click `add user to this repository`
 
-## Update the README.md
-Modify and add information about the new workshop/course.
+ ![](.tmp/add_collaborators.png)
 
-## Delete the .tmp folder
-The `.tmp` folder just supports this README file, so you can delete it after modifying it.
+3. **Update the README.md file**
+
+ Modify and add information about the new workshop/course.
+
+4. **Delete the .tmp folder**
+
+ The `.tmp` folder just supports this README file, so you can delete it after modifying it.
 
 # Structure
 
