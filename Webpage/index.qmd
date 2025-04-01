@@ -103,16 +103,4 @@ data <- read.csv("resources/samplesheet.csv")
 data %>% gt()
 ```
 
-or OSJ language 
-
-```{ojs}
-viewof table = Inputs.table(
-  data = FileAttachment("resources/samplesheet.csv").csv()
-)
-```
-
-
-### Course instructors
-
-Keep only the cards necessary to you in the cards folder
 
