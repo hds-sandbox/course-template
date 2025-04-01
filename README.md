@@ -47,7 +47,11 @@ On the other hand, actual data and slides can be too big for a GitHub repository
 
 ## Webpage
 
-The folder `Webpage` containes an example template for the webpage which is done in `quarto`. You can use markdown and both jupyter notebooks and R markdown documents to create the content of the webpage. The file `_quarto.yml` contains the configuration of the webpage. other folders contains various needed resources like images, cards with instructors photos, bioschemas, etc. To see some examples of quarto configurations and bioschemas, look at our webpages from established courses, or the [quarto documentation](https://quarto.org/).
+The folder `Webpage` containes an example template for the webpage which is done in `quarto`. You can use markdown and both jupyter notebooks and R markdown documents to create the content of the webpage. The file `_quarto.yml` contains the configuration of the webpage. other folders contains various needed resources like images, cards with instructors photos, bioschemas, etc. To see some examples of quarto configurations and bioschemas, look at our webpages from established courses, or the [quarto documentation](https://quarto.org/). R libraries to compile the R markdown files must be in the `renv.lock` file which you create locally when you develop your course material. [Here the docs to renv and how to create a snapshot of packages in renv.lock](https://rstudio.github.io/renv/articles/renv.html).
+
+### Some suggestions
+
+Some R packages are a gigantic PITA to install and need a lot of librares. An example: in the [Github Action File](.github/workflows/publish.yml) most of the linux libraries installed with `apt-get` are needed because otherwise it is impossible to install the `ragg` package. This was found out after hours of attempts to make the publication workflow to work. **If you can, stick to rendered jupyter notebooks which need no packages to be rendered into html format**. Your life will be muuuuuch easier, and github actions will always complete in few minutes.
 
 ### Hosting data in Zenodo
 

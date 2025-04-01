@@ -1,7 +1,7 @@
 ---
 title: Rmarkdown example
 summary: This is an example of an Rmarkdown development
-bibliography: ../resources/references.bib
+bibliography: ./resources/references.bib
 date-modified: last-modified
 date-format: long
 date: 2024-01-01
@@ -14,9 +14,6 @@ output:
   github_document: 
      preserve_yaml: TRUE
      html_preview: FALSE
-     pandoc_args: [
-  "--wrap", "none" # this is needed to not break admonitions
-    ]
 ---
 
 ```{r knitr, include = FALSE}
@@ -27,7 +24,7 @@ knitr::opts_chunk$set(autodep        = TRUE,
                       echo           = TRUE,
                       error          = FALSE,
                       fig.align      = "center",
-                      fig.path       = paste0("./images/", DOCNAME, "/"),
+                      fig.path       = paste0("./knitr_images/", DOCNAME, "/"),
                       message        = FALSE,
                       warning        = FALSE,
                       eval           = FALSE)
@@ -72,5 +69,5 @@ You can add images using the `knitr::include_graphics()` option.
 
 ```{r, echo = TRUE, eval = TRUE, out.width="50%"}
 
-knitr::include_graphics("../img/logo.png")
+knitr::include_graphics("./img/logo.png")
 ```
