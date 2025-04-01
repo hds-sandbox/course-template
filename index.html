@@ -6,6 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Instructor 1">
+<meta name="author" content="Instructor 2">
 
 <title>Course Template</title>
 <style>
@@ -19,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -68,6 +104,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
 </head>
@@ -129,33 +167,48 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#welcome-to-the-asdfvasdfv-tutorial" id="toc-welcome-to-the-asdfvasdfv-tutorial" class="nav-link active" data-scroll-target="#welcome-to-the-asdfvasdfv-tutorial">Welcome to the asdfvasdfv tutorial</a></li>
-  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
-  <li><a href="#print-a-table" id="toc-print-a-table" class="nav-link" data-scroll-target="#print-a-table">Print a table</a></li>
-  <li><a href="#course-instructors" id="toc-course-instructors" class="nav-link" data-scroll-target="#course-instructors">Course instructors</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+</div>
 
 
 
+<div class="quarto-title-meta column-page">
 
-<p>author: - name: Instructor 1 orcid: 0000-0000-0000-0001 email: instructor1@university.dk - name: Instructor 2 orcid: 0000-0000-0000-0002 email: instructor2@university.dk date-modified: last-modified date-format: long format: html: page-layout: full toc: false</p>
-<hr>
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Instructor 1 <a href="mailto:instructor1@university.dk" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0000-0000-0001" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+             <p>Instructor 2 <a href="mailto:instructor2@university.dk" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0000-0000-0002" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+          </div>
+  </div>
+    
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">April 1, 2025</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
 <section id="welcome-to-the-asdfvasdfv-tutorial" class="level1 hero-banner">
 <h1>Welcome to the asdfvasdfv tutorial</h1>
 </section>
-<p><br></p>
+<p>&nbsp;</p>
 <p>This course is an introduction to the method of dfhsdjkfhsjkfhksjhdf, which quantifies the statistical association between asdasdacfdc and dfvdefvv (often on disease traits). This course will not focus on using any particular software, instead explaining <em>why</em> the given analyses are done from a statistical and biological perspective.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Course Overview">
 <div class="callout-header d-flex align-content-center">
@@ -271,23 +324,23 @@ Course Goals
 <p>If you ever need to print a table just use R</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="gfwaveewao" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gfwaveewao table {
+<div id="chhjcidipf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#chhjcidipf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gfwaveewao thead, #gfwaveewao tbody, #gfwaveewao tfoot, #gfwaveewao tr, #gfwaveewao td, #gfwaveewao th {
+#chhjcidipf thead, #chhjcidipf tbody, #chhjcidipf tfoot, #chhjcidipf tr, #chhjcidipf td, #chhjcidipf th {
   border-style: none;
 }
 
-#gfwaveewao p {
+#chhjcidipf p {
   margin: 0;
   padding: 0;
 }
 
-#gfwaveewao .gt_table {
+#chhjcidipf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -313,12 +366,12 @@ Course Goals
   border-left-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_caption {
+#chhjcidipf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gfwaveewao .gt_title {
+#chhjcidipf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -330,7 +383,7 @@ Course Goals
   border-bottom-width: 0;
 }
 
-#gfwaveewao .gt_subtitle {
+#chhjcidipf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -342,7 +395,7 @@ Course Goals
   border-top-width: 0;
 }
 
-#gfwaveewao .gt_heading {
+#chhjcidipf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -354,13 +407,13 @@ Course Goals
   border-right-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_bottom_border {
+#chhjcidipf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_col_headings {
+#chhjcidipf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -375,7 +428,7 @@ Course Goals
   border-right-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_col_heading {
+#chhjcidipf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -395,7 +448,7 @@ Course Goals
   overflow-x: hidden;
 }
 
-#gfwaveewao .gt_column_spanner_outer {
+#chhjcidipf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -407,15 +460,15 @@ Course Goals
   padding-right: 4px;
 }
 
-#gfwaveewao .gt_column_spanner_outer:first-child {
+#chhjcidipf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gfwaveewao .gt_column_spanner_outer:last-child {
+#chhjcidipf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gfwaveewao .gt_column_spanner {
+#chhjcidipf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -427,11 +480,11 @@ Course Goals
   width: 100%;
 }
 
-#gfwaveewao .gt_spanner_row {
+#chhjcidipf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gfwaveewao .gt_group_heading {
+#chhjcidipf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -457,7 +510,7 @@ Course Goals
   text-align: left;
 }
 
-#gfwaveewao .gt_empty_group_heading {
+#chhjcidipf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -472,15 +525,15 @@ Course Goals
   vertical-align: middle;
 }
 
-#gfwaveewao .gt_from_md > :first-child {
+#chhjcidipf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gfwaveewao .gt_from_md > :last-child {
+#chhjcidipf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gfwaveewao .gt_row {
+#chhjcidipf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -499,7 +552,7 @@ Course Goals
   overflow-x: hidden;
 }
 
-#gfwaveewao .gt_stub {
+#chhjcidipf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -512,7 +565,7 @@ Course Goals
   padding-right: 5px;
 }
 
-#gfwaveewao .gt_stub_row_group {
+#chhjcidipf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -526,15 +579,15 @@ Course Goals
   vertical-align: top;
 }
 
-#gfwaveewao .gt_row_group_first td {
+#chhjcidipf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gfwaveewao .gt_row_group_first th {
+#chhjcidipf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gfwaveewao .gt_summary_row {
+#chhjcidipf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -544,16 +597,16 @@ Course Goals
   padding-right: 5px;
 }
 
-#gfwaveewao .gt_first_summary_row {
+#chhjcidipf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_first_summary_row.thick {
+#chhjcidipf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gfwaveewao .gt_last_summary_row {
+#chhjcidipf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -563,7 +616,7 @@ Course Goals
   border-bottom-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_grand_summary_row {
+#chhjcidipf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -573,7 +626,7 @@ Course Goals
   padding-right: 5px;
 }
 
-#gfwaveewao .gt_first_grand_summary_row {
+#chhjcidipf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -583,7 +636,7 @@ Course Goals
   border-top-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_last_grand_summary_row_top {
+#chhjcidipf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -593,11 +646,11 @@ Course Goals
   border-bottom-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_striped {
+#chhjcidipf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gfwaveewao .gt_table_body {
+#chhjcidipf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -606,7 +659,7 @@ Course Goals
   border-bottom-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_footnotes {
+#chhjcidipf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -620,7 +673,7 @@ Course Goals
   border-right-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_footnote {
+#chhjcidipf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -629,7 +682,7 @@ Course Goals
   padding-right: 5px;
 }
 
-#gfwaveewao .gt_sourcenotes {
+#chhjcidipf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -643,7 +696,7 @@ Course Goals
   border-right-color: #D3D3D3;
 }
 
-#gfwaveewao .gt_sourcenote {
+#chhjcidipf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -651,63 +704,63 @@ Course Goals
   padding-right: 5px;
 }
 
-#gfwaveewao .gt_left {
+#chhjcidipf .gt_left {
   text-align: left;
 }
 
-#gfwaveewao .gt_center {
+#chhjcidipf .gt_center {
   text-align: center;
 }
 
-#gfwaveewao .gt_right {
+#chhjcidipf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gfwaveewao .gt_font_normal {
+#chhjcidipf .gt_font_normal {
   font-weight: normal;
 }
 
-#gfwaveewao .gt_font_bold {
+#chhjcidipf .gt_font_bold {
   font-weight: bold;
 }
 
-#gfwaveewao .gt_font_italic {
+#chhjcidipf .gt_font_italic {
   font-style: italic;
 }
 
-#gfwaveewao .gt_super {
+#chhjcidipf .gt_super {
   font-size: 65%;
 }
 
-#gfwaveewao .gt_footnote_marks {
+#chhjcidipf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gfwaveewao .gt_asterisk {
+#chhjcidipf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gfwaveewao .gt_indent_1 {
+#chhjcidipf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gfwaveewao .gt_indent_2 {
+#chhjcidipf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gfwaveewao .gt_indent_3 {
+#chhjcidipf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gfwaveewao .gt_indent_4 {
+#chhjcidipf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gfwaveewao .gt_indent_5 {
+#chhjcidipf .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -785,6 +838,29 @@ Course Goals
 </div>
 </div>
 </div>
+<p>or OSJ language</p>
+<div class="quarto-ojs-syntax-error">
+<div class="sourceCode" id="cb1" data-startfrom="108" data-syntax-error-position="35" data-source-offset="9"><pre class="sourceCode numberSource numberLines java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 107;"><span id="cb1-108"><a href="#cb1-108"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
+<span id="cb1-109"><a href="#cb1-109"></a>viewof table <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">table</span><span class="op">(</span></span>
+<span id="cb1-110"><a href="#cb1-110"></a>  data<span class="op">:</span> <span class="fu">FileAttachment</span><span class="op">(</span><span class="st">"resources/samplesheet.csv"</span><span class="op">).</span><span class="fu">csv</span><span class="op">()</span></span>
+<span id="cb1-111"><a href="#cb1-111"></a><span class="op">)</span></span>
+<span id="cb1-112"><a href="#cb1-112"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+OJS Syntax Error (line 110, column 7)Unexpected token
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="course-instructors" class="level3">
 <h3 class="anchored" data-anchor-id="course-instructors">Course instructors</h3>
@@ -794,6 +870,17 @@ Course Goals
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
