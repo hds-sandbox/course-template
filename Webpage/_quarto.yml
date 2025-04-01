@@ -10,7 +10,7 @@ website:
         text: Introduction
       - href: people.qmd
         text: People
-      - href: rmd/rmarkdown_example.Rmd
+      - href: rmarkdown_example.Rmd
         text: Rmarkdown      
       - href: jupyter_example.ipynb
         text: Jupyter example
