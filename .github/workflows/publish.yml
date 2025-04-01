@@ -26,12 +26,15 @@ jobs:
 
 # If you do not need any R package for notebooks or R Markdown documents, you can skip the following two steps by removing them.
 # For this template you have a lock file with some packages installed to be able to print tables in markdown and compile the R markdown page example
+# Note the specific folder to find renv.lock (which you can create for your own needs using the renv package and the renv::snapshot() function)
 
       - name: Install R
         uses: r-lib/actions/setup-r@v2
 
       - name: Install R Dependencies
         uses: r-lib/actions/setup-renv@v2
+        with:
+          lock-path: Webpage/renv.lock
 
 # This part publishes the website to the gh-pages branch
 # but looks specifically at Webpage folder to find the _quarto.yml file
