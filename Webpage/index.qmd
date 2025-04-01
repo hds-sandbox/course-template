@@ -107,7 +107,7 @@ or OSJ language
 
 ```{ojs}
 viewof table = Inputs.table(
-  data: FileAttachment("resources/samplesheet.csv").csv()
+  const data = await FileAttachment("resources/samplesheet.csv").csv();
 )
 ```
 
