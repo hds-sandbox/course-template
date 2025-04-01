@@ -2,21 +2,20 @@
 
 This repository is a template for courses and webpages for self-learning.
 
-## Using this template
+# Using this template
 
-### Click the green `Use this template` button to the top right.
+## Click the green `Use this template` button to the top right.
   
 In the pop-up window:
 
    1. Choose an organisation where the repository will be hosted
    2. Enter a name for the new repository (keep in mind that this will be part of the URL)
    3. Decide if the repository should be Public (most likely) or Private
-   4. Make sure to tick `Include all branches`
-   5. Click **`Create repository from template`**
+   4. Click **`Create repository from template`**
 
-![](./tmp/new_repo_from_template.png)
+![](.tmp/new_repo_from_template.png)
 
-### Add collaborators
+## Add collaborators
 Go to settings and select `Collaborators and teams` under `Access` in the left side menu 
 
 1. Click one of the green buttons `add people`  or `add teams`
@@ -24,42 +23,53 @@ Go to settings and select `Collaborators and teams` under `Access` in the left s
 3. Select the appropriate role 
 4. Click `add user to this repository`
 
-![](./tmp/add_collaborators.png)
+![](.tmp/add_collaborators.png)
 
-### Update the README.md
+## Update the README.md
 Modify and add information about the new workshop/course.
 
-### Delete the tmp folder
-The tmp folder just supports this README file, so you can delete it after modifying it.
+## Delete the .tmp folder
+The `.tmp` folder just supports this README file, so you can delete it after modifying it.
 
-## The branches
+# Structure
 
-### main branch
+Everything necessary is in the main branch.
 
-The main branch is a folder template to create the actual materials for a workshop session. Notebooks, exercises and materials associated to them (like images) should be here. **Maintaining only one version of the coding material is essential to ensure consistency and avoid confusion. Please do not make copies on the server or locally; use version control for edits instead.**
+## Course material
 
-On the other hand, actual data and slides are too big for a GitHub repository. Read the next section about hosting data in a [zenodo](https://zenodo.org/) repository. Consider what is the best strategy for hosting or sharing slides. For collaborative questions, there is a copy in SharePoint.
+There are already some examples folders for notebooks, scripts and so on, but you can create any extra folder you need. Notebooks, exercises and materials associated to them (like images) should be in those folders. 
 
-#### Hosting data in Zenodo
+Remember:
+
+> **Maintaining only one version of the coding material is essential to ensure consistency and avoid confusion. Please do not make copies on the server or locally; use version control for edits instead.**
+
+On the other hand, actual data and slides can be too big for a GitHub repository. Read the next section about hosting data in a [zenodo](https://zenodo.org/) repository. Consider what is the best strategy for hosting or sharing slides. For collaborative questions, there is a copy in SharePoint.
+
+## Webpage
+
+The folder `Webpage` containes an example template for the webpage which is done in `quarto`. You can use markdown and both jupyter notebooks and R markdown documents to create the content of the webpage. The file `_quarto.yml` contains the configuration of the webpage. other folders contains various needed resources like images, cards with instructors photos, bioschemas, etc. To see some examples of quarto configurations and bioschemas, look at our webpages from established courses, or the [quarto documentation](https://quarto.org/).
+
+### Hosting data in Zenodo
 
 Zenodo is an Open Science data repository from the OpenAIRE project supported by [CERN](https://home.cern/) to ensure that everyone can join in Open Science. 
 It allows researchers to upload many different types of data and gives each repository a unique and citeable identifier (DOI). 
 We can also link a GitHub repository and whenever you create a release for the GitHub repo, it will give it as well a DOI. 
 Follow this [link](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) for instructions 
-We are using Zenodo to deposit complementary materials and data necessary for the course, relieving the size of the GitHub repo. It also makes it easier to update the materials and use them in the UCloud apps.
+We are using Zenodo to deposit complementary materials and data necessary for the course, relieving the size of the GitHub repo. It also makes it easier to update the materials and use them in the UCloud apps and in any other computing cluster/local computer.
 
-### webpage-mkdocs branch (older solution)
+### Github actions
 
-The webpage-mkdocs branch contains all the content needed to create and deploy the self-learning part of the course/workshop. 
-For more instructions, including how to set up GitHub Pages and automatic deploying of the webpage, check the README.md file from the [webpage branch](https://github.com/hds-sandbox/course-template/tree/webpage-mkdocs).
-Note: MkDocs requires a lot of plugins, which can be deprecated over time. You can use the branch `webpage-quarto` which does not require extra packages and will be more longeve.
+The tool we use to create the website is Quarto with the theme [`material`](https://squidfunk.github.io/). Instead of relying on Quarto, we use GitHub Actions to automatically build and deploy the website. Every time you push a change to the `main` branch, the webpage will be automatically recreated with any new changes. This is done using a GitHub Action workflow that runs on every push to the `main` branch which includes changes in the `Webpage` folder (so you avoid recompiling the webpage when doing unrelated changes). The workflow is defined in the [Github Action File](.github/workflows/publish.yml). 
 
-### webpage-quarto branch (recommended)
+The action will create a new branch called `gh-pages`. This will contain the rendered page and **MUST NEVER EVER BE MODIFIED**. If you do it by mistake, it is actually fine. simply delete the branch and push changes to the `Webpage` folder again.
 
-The webpage-quarto branch contains - as above - an example of a webpage to create and deploy the self-learning part of the course/workshop. Go to the branch to see what you need (`quarto` and a few `R` packages) to get going.
+## Docker
 
-### gh-pages branch
+We will avoid creating docker containers for every course, otherwise they will easily be outdated and too many to control. There is instead a global docker container for each app which can be used on any cluster through the correct instructions, if either docker or singularity is installed (otherwise the user will be on its own to create a software environment). To see the instructions for the container app, go to the [Intro to GWAS](https://hds-sandbox.github.io/GWAS_course/) or [Intro to NGS data analysis](https://hds-sandbox.github.io/Intro-NGS-AU_course/) access instructions, where you can see how two different courses run from the same app in different user scenarios.
 
-The tool we use to create the website is Quarto with the theme [`material`](https://squidfunk.github.io/). Instead of relying on Quarto, we use GitHub Actions to automatically build and deploy the website.
+If you do not have you course onto an app, it is still easier to either
 
-The source content is stored in the "webpage" branch. Whenever a commit is pushed to this branch, a GitHub workflow is triggered to build the Quarto website and deploy it to a new branch called "gh-pages." This branch serves as the live version of the website. Using this automated workflow ensures that updates to the website are consistent and immediate after changes are made in the "webpage" branch.'
+- make your own configuration for ucloud, or
+- use a software environment in genomeDK, uCloud or any other cluster or local PC
+
+until you have your course as part of a Sandbox App.
