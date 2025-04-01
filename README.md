@@ -72,4 +72,4 @@ If you do not have you course onto an app, it is still easier to either
 - make your own configuration for ucloud, or
 - use a software environment in genomeDK, uCloud or any other cluster or local PC
 
-until you have your course as part of a Sandbox App.
+until you have your course as part of a Sandbox App. 
