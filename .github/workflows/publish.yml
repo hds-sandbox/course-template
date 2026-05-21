@@ -4,6 +4,8 @@ on:
       - main
     paths:
       - 'Webpage/**'
+      - 'Notebooks/**'
+      - '.github/**'
   workflow_dispatch:
 
 name: Quarto Publish
