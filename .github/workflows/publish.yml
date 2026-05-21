@@ -23,7 +23,7 @@ jobs:
 
       - name: Set up python
         uses: actions/setup-python@v6
-      - run: pip install -r pandas tabulate
+      - run: pip install --no-cache-dir pandas tabulate
 
       - name: copy Notebook folder into Webpage
         run: cp -a Notebooks Webpage/
