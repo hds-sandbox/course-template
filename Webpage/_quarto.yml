@@ -4,15 +4,13 @@ project:
 website:
   title: "Course Template"
   navbar:
-    logo: /img/logo.png
+    logo: img/logo.png
     left:
       - href: index.qmd
         text: Introduction
       - href: people.qmd
         text: People
-      - href: rmarkdown_example.Rmd
-        text: Rmarkdown      
-      - href: jupyter_example.ipynb
+      - href: Notebooks/jupyter_example.ipynb
         text: Jupyter example
     right: 
       - icon: github
@@ -30,5 +28,4 @@ format:
       dark: darkly
     toc: true
     code-fold: true
-#    include-in-header:
-#      - file: "resources/bioschema.html"
+#    include-in-header: resources/bioschema.html

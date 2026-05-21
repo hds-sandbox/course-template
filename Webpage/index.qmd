@@ -89,18 +89,17 @@ By the end of this workshop, you should be able to:
 - [Matti Pirinen, PhD](https://www.mv.helsinki.fi/home/mjxpirin/), University of Helsinki
 - [Andries T. Marees](https://research.vu.nl/en/persons/andries-marees), Vrije Universiteit Amsterdam
 
-### Print a table
+## Table plotting 
 
-If you ever need to print a table just use R
+```{python}
+import pandas as pd
+from tabulate import tabulate
 
-```{r}
-#| echo: false
-library(gt)
-# Load the data from CSV
-data <- read.csv("resources/samplesheet.csv")
+df = pd.DataFrame({
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [25, 30, 35],
+    "City": ["New York", "Los Angeles", "Chicago"]
+})
 
-# Print the data as a table
-data %>% gt()
+print(tabulate(df, tablefmt='fancy_grid'))
 ```
-
-
