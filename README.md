@@ -48,13 +48,13 @@ Remember:
 
 On the other hand, actual data and slides can be too big for a GitHub repository. Read the next section about hosting data in a [zenodo](https://zenodo.org/) repository. Consider what is the best strategy for hosting or sharing slides. For collaborative questions, there is a copy in SharePoint.
 
-## Webpage
+## Webpage and packages
 
-The folder `Webpage` containes an example template for the webpage which is done in `quarto`. You can use markdown and both jupyter notebooks and R markdown documents to create the content of the webpage. The file `_quarto.yml` contains the configuration of the webpage. other folders contains various needed resources like images, cards with instructors photos, bioschemas, etc. To see some examples of quarto configurations and bioschemas, look at our webpages from established courses, or the [quarto documentation](https://quarto.org/). R libraries to compile the R markdown files must be in the `renv.lock` file which you create locally when you develop your course material. [Here the docs to renv and how to create a snapshot of packages in renv.lock](https://rstudio.github.io/renv/articles/renv.html).
+The folder `Webpage` containes the markdown pages of the website (`qmd` format). Notebooks are taken directly from the folder `Notebooks` where you find a couple of examples. The configuration file is `_quarto.yml`. We suggesting using only jupyter notebooks and not R markdown documents - you can do R markdown only for courses with very small datasets, because the github actions has very limited amount fo resources to compile code. The file `_quarto.yml` contains also a commented code for the bioschema which makes the course visible on the TeSS course archive. Other folders contains various needed resources like images, cards with instructors photos, bioschemas, etc. To see some examples of quarto configurations and bioschemas, look at our webpages from established courses, or the [quarto documentation](https://quarto.org/). R libraries to compile the R markdown files and to be used in R+Rstudio must be in the `Environments/renv.lock` file which you create locally when you develop your course material. [Here the docs to renv and how to create a snapshot of packages in renv.lock](https://rstudio.github.io/renv/articles/renv.html). Environment for jupyterlab must be in the `Environments/environment.yaml` file. Both environments are periodically updated through the Github Dependabot. The webpage is automatically published at each edit by Github Workflows.
 
-### Some suggestions
+### Some suggestions about packages
 
-Some R packages are a gigantic PITA to install and need a lot of librares. An example: in the [Github Action File](.github/workflows/publish.yml) most of the linux libraries installed with `apt-get` are needed because otherwise it is impossible to install the `ragg` package. This was found out after hours of attempts to make the publication workflow to work. **If you can, stick to rendered jupyter notebooks which need no packages to be rendered into html format**. Your life will be muuuuuch easier, and github actions will always complete in few minutes.
+Some R packages are a gigantic PITA to install and need a lot of librares. An example: in the [Github Action File](.github/workflows/publish.yml) most of the linux libraries installed with `apt-get` are needed because otherwise it is impossible to install the `ragg` package. This was found out after hours of attempts to make the publication workflow to work. **If you can, stick to rendered jupyter notebooks which need no packages to be rendered into html format**. Your life will be muuuuuch easier, and github actions will always complete in few minutes. We will likely deprecate the use of R markdown completely very soon and switch to jupyterlab + conda/pixi environments only.
 
 ### Hosting data in Zenodo
 
@@ -70,7 +70,9 @@ The tool we use to create the website is Quarto with the theme [`material`](http
 
 The action will create a new branch called `gh-pages`. This will contain the rendered page and **MUST NEVER EVER BE MODIFIED**. If you do it by mistake, it is actually fine. simply delete the branch and push changes to the `Webpage` folder again.
 
-## Docker
+Dependabot is another action that update dependencies. It is used to keep actions up to date for publishing the webpage and to update the R and python packages in the environments. It is configured to run every week, but you can also trigger it manually if you want to update the environments.
+
+## Docker and Apptainer
 
 We will avoid creating docker containers for every course, otherwise they will easily be outdated and too many to control. There is instead a global docker container for each app which can be used on any cluster through the correct instructions, if either docker or singularity is installed (otherwise the user will be on its own to create a software environment). To see the instructions for the container app, go to the [Intro to GWAS](https://hds-sandbox.github.io/GWAS_course/) or [Intro to NGS data analysis](https://hds-sandbox.github.io/Intro-NGS-AU_course/) access instructions, where you can see how two different courses run from the same app in different user scenarios.
 
